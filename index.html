@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍅 Pomodoro Timer</h1>
+        
+        <div class="session-info" id="sessionInfo">Work Session</div>
+        
+        <svg class="progress-ring" width="200" height="200">
+            <circle class="progress-ring-circle" cx="100" cy="100" r="90"></circle>
+            <circle class="progress-ring-progress" id="progressCircle" cx="100" cy="100" r="90"></circle>
+        </svg>
+        
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn" disabled>Pause</button>
+            <button id="resetBtn">Reset</button>
+            <button id="skipBtn">Skip</button>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number" id="completedPomodoros">0</span>
+                <span class="stat-label">Completed</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="currentCycle">1</span>
+                <span class="stat-label">Cycle</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="totalTime">0m</span>
+                <span class="stat-label">Total Time</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
